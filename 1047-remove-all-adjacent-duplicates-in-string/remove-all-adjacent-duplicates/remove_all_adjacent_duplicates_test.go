@@ -8,33 +8,36 @@ func TestRemoveAdjacentDuplicates(t *testing.T) {
 	expected := "ca"
 	if removeAdjacentDuplicates != expected {
 		t.Errorf("expected '%q' but got '%q'", 
-			expected, 
-			removeAdjacentDuplicates,
+			expected, removeAdjacentDuplicates,
 		)
 	}
 
 	removeAdjacentDuplicates = RemoveAdjacentDuplicates("azxxzy")
 	expected = "ay"
 	if removeAdjacentDuplicates != expected {
-		t.Errorf("expected '%q' but got '%q'", expected, removeAdjacentDuplicates)
+		t.Errorf("expected '%q' but got '%q'", 
+			 expected, removeAdjacentDuplicates)
 	}
 
 	removeAdjacentDuplicates = RemoveAdjacentDuplicates("abccba")
 	expected = ""
 	if removeAdjacentDuplicates != expected {
-		t.Errorf("expected '%q' but got '%q'", expected, removeAdjacentDuplicates)
+		t.Errorf("expected '%q' but got '%q'", 
+			 expected, removeAdjacentDuplicates)
 	}
 
 	removeAdjacentDuplicates = RemoveAdjacentDuplicates("foobar")
 	expected = "fbar"
 	if removeAdjacentDuplicates != expected {
-		t.Errorf("expected '%q' but got '%q'", expected, removeAdjacentDuplicates)
+		t.Errorf("expected '%q' but got '%q'", 
+			 expected, removeAdjacentDuplicates)
 	}
 
 	removeAdjacentDuplicates = RemoveAdjacentDuplicates("abcd")
 	expected = "abcd"
 	if removeAdjacentDuplicates != expected {
-		t.Errorf("expected '%q' but got '%q'", expected, removeAdjacentDuplicates)
+		t.Errorf("expected '%q' but got '%q'", 
+			 expected, removeAdjacentDuplicates)
 	}
 
 }
